@@ -1,0 +1,110 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Raleway, sans-serif;
+  width: 1440px;
+  text-align: left;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.nav-bar {
+  padding: 65px 80px 80px 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav-link-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-link-container li {
+  display: inline;
+  text-decoration: none;
+}
+
+.nav-link-container li a {
+  color: #000;
+  text-decoration: none;
+}
+
+
+/* HERO / EMAIL CAPTURE SECTION */
+
+.hero-section {
+  padding: 5px 80px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.hero-section img {
+  width: 50%;
+  height: 50%;
+}
+
+
+
+
+/* TESTIMONIAL SECTION */
+
+.testimonial-section {
+  padding: 80px;
+  display: flex;
+  align-items: center;
+  background-color: hsl(230, 55%, 98%);
+  margin-top: -4px;
+}
+
+.testimonial-picture {
+  width: 40%;
+  height: 40%;
+}
+
+
+
+/* SIGN UP SECTION */
+
+.sign-up-section {
+  padding: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: hsl(238, 22%, 44%);
+}
+
+
+
+/* CONTACT / LINKS SECTION */
+
+.contact-links-section {
+  background-color: hsl(243, 87%, 12%);
+  color: #fff;
+  padding: 80px;
+}
+
+.contact-links-section a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: row;
+}
+
+.contact {
+  padding: 50px 50px 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
+}
