@@ -12,6 +12,11 @@ body {
   padding: 0;
 }
 
+p {
+  font-family: Open Sans, sans-serif;
+  font-weight: 400;
+}
+
 .nav-bar {
   padding: 65px 80px 80px 80px;
   display: flex;
@@ -19,15 +24,23 @@ body {
   justify-content: space-between;
 }
 
+.nav-bar img {
+  cursor: pointer;
+}
+
 .nav-link-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 .nav-link-container li {
   display: inline;
   text-decoration: none;
+}
+
+
+.nav-link-container li:nth-child(2) {
+  margin: 0 53px;
 }
 
 .nav-link-container li a {
@@ -40,7 +53,7 @@ body {
 
 .hero-section {
   padding: 5px 80px;
-  margin: 0;
+  margin-bottom: 160px;
   display: flex;
   align-items: center;
 }
@@ -50,8 +63,47 @@ body {
   height: 50%;
 }
 
+.hero-email-capture h1 {
+  font-weight: 700;
+  line-height: 1.5;
+  font-size: 2.5rem;
+}
 
+.hero-email-capture p {
+  font-size: 19px;
+  line-height: 1.3;
+  margin: 25px 0;
+}
 
+.submit-button {
+  background-color: hsl(224, 93%, 58%);
+  color: white;
+  padding: 14px 65px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.enter-email {
+  padding: 10px;
+  text-align: left;
+  width: 45%;
+  height: 20px;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+
+/* WAVE PHOTOS FOR DESKTOP AND MOBILE */
+
+.wave-mobile {
+  display: none;
+  width: 100%;
+}
+
+.wave-desktop {
+  width: 100%;
+}
 
 /* TESTIMONIAL SECTION */
 
@@ -68,18 +120,88 @@ body {
   height: 40%;
 }
 
+.testimonial-section-left h1 {
+  font-size: 40px;
+  line-height: 2;
+  margin-bottom: 10px;
+}
 
+.testimonial-section-info {
+  font-size: 16px;
+  width: 70%;
+}
+
+.how-filo-works {
+  color: hsl(170, 45%, 43%);
+  text-decoration: none;
+  padding-bottom: 5px;
+  border-bottom: solid 1px hsl(170, 45%, 43%);
+}
+
+.testimonial-card {
+  background-color: #fff;
+  margin: 50px 0;
+  padding: 25px;
+  width: 40%;
+  height: 30%;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 16px 3px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 0px 16px 3px rgba(0,0,0,0.1);
+  box-shadow: 0px 0px 16px 3px rgba(0,0,0,0.1);
+}
+
+.quote {
+  font-size: 14px;
+  line-height: 2;
+}
+
+.card-picture {
+  border-radius: 50%;
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+.profile-picture-name {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.quote-name, .quote-title {
+  font-size: 12px;
+}
 
 /* SIGN UP SECTION */
 
 .sign-up-section {
-  padding: 80px;
+  color: #fff;
+  padding: 80px 100px 80px 80px;
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   background-color: hsl(238, 22%, 44%);
 }
 
+.email-capture-copy {
+  width: 40%;
+}
+
+.early-access-title {
+  padding-bottom: 40px;
+  font-size: 35px;
+}
+
+.enter-email.capture-section {
+  width: 500px;
+}
+
+.submit-button.capture-section {
+  margin: 10px 0 0;
+  padding: 14px 40px;
+}
 
 
 /* CONTACT / LINKS SECTION */
@@ -87,12 +209,13 @@ body {
 .contact-links-section {
   background-color: hsl(243, 87%, 12%);
   color: #fff;
-  padding: 80px;
+  padding: 100px 80px;
 }
 
 .contact-links-section a {
   color: #fff;
   text-decoration: none;
+  margin-bottom: 20px
 }
 
 .contact-links {
@@ -101,10 +224,41 @@ body {
 }
 
 .contact {
-  padding: 50px 50px 50px 0;
+  padding: 20px 150px 0 0;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   justify-content: space-between;
   align-items: flex-start;
+}
+
+.contact-part {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-part img {
+  padding-right: 15px;
+}
+
+.phone-info {
+  margin-bottom: 15px;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+
+}
+
+.social-media i {
+  border: 1px solid #fff;
+  border-radius: 100%;
+  padding: 10px;
+  margin: 5px;
+}
+
+.fab.fa-facebook-f {
+  padding: 10px 13px;
 }
