@@ -6,7 +6,6 @@
 
 body {
   font-family: Raleway, sans-serif;
-  width: 1440px;
   text-align: left;
   margin: 0 auto;
   padding: 0;
@@ -17,8 +16,12 @@ p {
   font-weight: 400;
 }
 
+/* NAV BAR */
+
 .nav-bar {
-  padding: 65px 80px 80px 80px;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 65px 80px 80px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -48,12 +51,36 @@ p {
   text-decoration: none;
 }
 
+ul li a {
+  position: relative;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+ul li a::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 3px;
+  top: 100%;
+  left: 0;
+  background: hsl(224, 93%, 58%);
+  transition: transform 0.5s;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
 
 /* HERO / EMAIL CAPTURE SECTION */
 
 .hero-section {
+  max-width: 1280px;
+  margin: 0 auto 160px;
   padding: 5px 80px;
-  margin-bottom: 160px;
   display: flex;
   align-items: center;
 }
@@ -63,16 +90,19 @@ p {
   height: 50%;
 }
 
+
 .hero-email-capture h1 {
   font-weight: 700;
   line-height: 1.5;
   font-size: 2.5rem;
+  margin-top: -30px;
 }
 
 .hero-email-capture p {
-  font-size: 19px;
+  font-size: 18px;
   line-height: 1.3;
-  margin: 25px 0;
+  margin: 20px 0;
+  width: 90%;
 }
 
 .submit-button {
@@ -83,6 +113,21 @@ p {
   border-radius: 4px;
   cursor: pointer;
   margin-left: 15px;
+  -webkit-transition:all 200ms ease-in-out;
+  -moz-transition:all 200ms ease-in-out;
+  -ms-transition:all 200ms ease-in-out;
+  -webkit-box-shadow: 0px 0px 16px 3px rgba(0,0,0,0.07);
+  -moz-box-shadow: 0px 0px 16px 3px rgba(0,0,0,0.07);
+  box-shadow: 0px 0px 16px 3px rgba(0,0,0,0.07);
+}
+
+.submit-button:hover {
+  -webkit-transition:all 200ms ease-in-out;
+  -moz-transition:all 200ms ease-in-out;
+  -ms-transition:all 200ms ease-in-out;
+  -webkit-box-shadow: 0px 0px 16px 3px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 0px 16px 3px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 16px 3px rgba(0,0,0,0.2);
 }
 
 .enter-email {
@@ -108,11 +153,15 @@ p {
 /* TESTIMONIAL SECTION */
 
 .testimonial-section {
+  background-color: hsl(230, 55%, 98%);
+}
+
+.testimonial-wrapper {
+  max-width: 1280px;
+  margin: -4px auto 0;
   padding: 80px;
   display: flex;
   align-items: center;
-  background-color: hsl(230, 55%, 98%);
-  margin-top: -4px;
 }
 
 .testimonial-picture {
@@ -177,12 +226,17 @@ p {
 
 .sign-up-section {
   color: #fff;
+  background-color: hsl(238, 22%, 44%);
+}
+
+.sign-up-wrapper {
   padding: 80px 100px 80px 80px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  background-color: hsl(238, 22%, 44%);
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .email-capture-copy {
@@ -194,8 +248,18 @@ p {
   font-size: 35px;
 }
 
+.early-access-text {
+  line-height: 1.7;
+}
+
+.email-capture-form {
+  width: 40%;
+}
+
 .enter-email.capture-section {
-  width: 500px;
+  width: 100%;
+  margin-bottom: 10px;
+  border: 1px solid #fff;
 }
 
 .submit-button.capture-section {
@@ -212,22 +276,20 @@ p {
   padding: 100px 80px;
 }
 
+.contact-links-wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
 .contact-links-section a {
   color: #fff;
   text-decoration: none;
-  margin-bottom: 20px
-}
-
-.contact-links {
-  display: flex;
-  flex-direction: row;
+  margin-bottom: 10px
 }
 
 .contact {
   padding: 20px 150px 0 0;
   display: flex;
-  justify-content: left;
-  align-items: center;
   justify-content: space-between;
   align-items: flex-start;
 }
@@ -261,4 +323,299 @@ p {
 
 .fab.fa-facebook-f {
   padding: 10px 13px;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 1030px) {
+
+  /* NAV BAR */
+
+  .nav-bar img {
+    width: 80%;
+  }
+
+  /* HERO SECTION */
+
+  .hero-section {
+    margin: 0 auto 100px;
+  }
+
+  .hero-email-capture h1 {
+    font-size: 1.8rem;
+    width: 90%;
+  }
+
+  .hero-email-capture p {
+    font-size: 16px;
+    width: 80%;
+  }
+
+  .enter-email {
+    width: 70%;
+  }
+
+  .submit-button {
+    margin: 15px 0 0;
+  }
+
+  .hero-section img {
+    width: 40%;
+  }
+
+  /* TESTIMONIAL SECTION */
+
+  .testimonial-section-left h1 {
+    font-size: 2rem;
+    width: 80%;
+  }
+
+  .testimonial-section-info, .testimonial-section-info-2 {
+    font-size: .9rem;
+  }
+
+  .testimonial-card {
+    width: 60%;
+  }
+
+  /* CONTACT SECTION */
+
+  .contact {
+    padding: 20px 0 0 0;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+
+  /* NAV SECTION */
+
+  .nav-bar {
+    padding: 65px 10% 80px;
+  }
+
+  /* HERO SECTION */
+
+  .hero-section {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 5px 10%;
+  }
+
+  .hero-section img {
+    width: 90%;
+  }
+
+  .hero-email-capture h1 {
+    margin-top: 50px;
+    width: 100%;
+    font-size: 2.5rem;
+  }
+
+  .hero-email-capture p {
+    width: 100%;
+  }
+
+  /* TESTIMONIAL SECTION */
+
+  .testimonial-wrapper {
+    padding: 10%;
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .testimonial-picture {
+    width: 100%;
+    margin-bottom: 100px;
+  }
+
+  .testimonial-section-left h1 {
+    font-size: 2rem;
+    width: 100%;
+  }
+
+  .testimonial-section-left p {
+    width: 100%;
+    text-align: left;
+  }
+
+  .testimonial-section-info {
+    font-size: 1.5rem;
+  }
+
+  .testimonial-section-info-2 {
+    margin-bottom: 100px;
+    font-size: 1.5rem;
+  }
+
+  .how-filo-works {
+    font-size: 1.5rem;
+  }
+
+  .testimonial-card {
+    margin: 100px auto 100px;
+    padding: 7%;
+    width: 60%;
+    text-align: left;
+  }
+
+  .quotation-mark {
+    width: 5%;
+  }
+
+  .quote {
+    font-size: 1rem;
+    line-height: 2;
+  }
+
+  /* SIGN UP SECTION */
+
+  .sign-up-wrapper {
+    margin: 0;
+    padding: 100px 18%;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .email-capture-copy {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+
+  .early-access-text {
+    font-size: 1.5rem;
+  }
+
+  .email-capture-form {
+    width: 100%;
+  }
+
+  .enter-email.capture-section {
+    width: 95%;
+  }
+
+  .submit-button.capture-section {
+    width: 100%;
+  }
+
+  /* CONTACT / LINKS SECTION */
+
+  .contact {
+    padding: 20px 0 0;
+    flex-direction: column;
+  }
+
+  .contact-part {
+    margin-bottom: 30px;
+  }
+
+  .social-media {
+    padding: 0;
+    margin: 0 auto;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+
+  /* NAV BAR */
+
+  .nav-bar {
+    padding: 65px 4% 80px;
+  }
+
+  .nav-link-container li:nth-child(2) {
+    margin: 0 30px;
+  }
+
+  /* TESTIMONIAL SECTION */
+
+  .testimonial-card {
+    width: 90%;
+  }
+
+}
+
+@media screen and (max-width: 450px) {
+
+  /* NAV BAR */
+
+  .nav-bar {
+    padding: 65px 4% 80px;
+  }
+
+  .nav-link-container li:nth-child(2) {
+    margin: 0 10px;
+  }
+
+  /* HERO / EMAIL CAPTURE SECTION  */
+
+  .enter-email {
+    width: 95%;
+  }
+
+  .submit-button {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+
+  /* NAV BAR */
+
+  .nav-link-container li:nth-child(2) {
+    margin: 0 5px;
+  }
+
+  /* HERO / EMAIL CAPTURE SECTION  */
+
+  .hero-section {
+    padding: 5px 5%;
+  }
+
+  .hero-email-capture h1 {
+    font-size: 1.8rem;
+  }
+
+  .enter-email {
+    width: 93%;
+  }
+
+  .submit-button {
+    width: 100%;
+  }
+
+  /* TESTIMONIAL SECTION */
+
+  .testimonial-section-info, .testimonial-section-info-2 {
+    font-size: 1.2rem;
+  }
+
+  .quote {
+    font-size: 0.8rem;
+  }
+
+  /* SIGN UP SECTION */
+
+  .sign-up-wrapper {
+    padding: 100px 9%;
+  }
+
+  .early-access-title {
+    font-size: 1.5rem;
+  }
+
+  .early-access-text {
+    font-size: 1rem;
+  }
+
+  .enter-email.capture-section {
+    width: 91%;
+  }
+
+  /* CONTACT / LINKS SECTION */
+
+  .contact-links-section {
+    padding: 100px 15%;
+  }
 }
