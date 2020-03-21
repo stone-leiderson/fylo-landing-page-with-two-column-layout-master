@@ -175,10 +175,12 @@ ul li a:hover::after {
   margin-bottom: 10px;
 }
 
-.testimonial-section-info {
+.testimonial-section-info, .testimonial-section-info-2 {
   font-size: 16px;
   width: 70%;
+  margin-bottom: 15px;
 }
+
 
 .how-filo-works {
   color: hsl(170, 45%, 43%);
